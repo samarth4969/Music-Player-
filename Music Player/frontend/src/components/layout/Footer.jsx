@@ -1,0 +1,28 @@
+import React from "react";
+
+import SongDetail from "../player/SongDetail";
+import ControlArea from "../player/ControlArea";
+import Features from "../player/Features";
+
+import "../../css/footer/Footer.css";
+
+const Footer = ({ playerState, playerControls, playerFeatures }) => {
+  return (
+    <footer className="footer-root footer-glow">
+      <SongDetail currentSong={playerState.currentSong} />
+
+      <ControlArea
+        playerState={playerState}
+        playerControls={playerControls}   // ✅ FIX
+      />
+
+      <Features
+        playerState={playerState}
+        playerFeatures={playerFeatures}
+        playerControls={playerControls}
+      />
+    </footer>
+  );
+};
+
+export default Footer;
