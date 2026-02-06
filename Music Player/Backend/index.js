@@ -16,12 +16,16 @@ app.use(express.urlencoded({ limit: "10mb", extended: true }));
 // Connect DB
 connectDB();
 
-app.use(
-  cors({
-    origin: "http://localhost:5173",
-    credentials: true,
-  })
-);
+import cors from "cors";
+
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://music-player-gamma-teal.vercel.app"
+  ],
+  credentials: true
+}));
+
 
 app.use("/api/songs", songRouter);
 app.use("/api/auth", router); // ✅ NOW WORKS
