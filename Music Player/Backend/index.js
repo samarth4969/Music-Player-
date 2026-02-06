@@ -16,7 +16,6 @@ app.use(express.urlencoded({ limit: "10mb", extended: true }));
 // Connect DB
 connectDB();
 
-import cors from "cors";
 
 app.use(cors({
   origin: [
