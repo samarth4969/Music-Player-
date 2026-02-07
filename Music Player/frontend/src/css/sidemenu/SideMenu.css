@@ -98,11 +98,34 @@
   opacity: 1;
 }
 
-.sidemenu-nav-btn:hover {
-  @apply text-white transform translate-x-1;
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.15);
+.sidemenu-nav-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 20%;
+  height: 60%;
+  width: 3px;
+  background: linear-gradient(#a855f7, #ec4899);
+  opacity: 0;
+  border-radius: 4px;
+  transition: all 0.3s ease;
 }
+
+.sidemenu-nav-btn:hover::after {
+  opacity: 1;
+  left: -2px;
+}
+
+
+.sidemenu-nav-btn:hover {
+  @apply text-white;
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateX(4px) scale(1.02);
+  box-shadow:
+    0 6px 20px rgba(168, 85, 247, 0.25),
+    0 0 20px rgba(236, 72, 153, 0.15);
+}
+
 
 .sidemenu-nav-icon {
   @apply relative z-10;
@@ -110,7 +133,7 @@
 }
 
 .sidemenu-nav-btn:hover .sidemenu-nav-icon {
-  transform: scale(1.1);
+   transform: scale(1.15) rotate(-5deg);
 }
 
 .sidemenu-nav-btn span {
@@ -128,7 +151,8 @@
   @apply text-white shadow-lg;
   box-shadow: 0 4px 20px rgba(168, 85, 247, 0.3),
     0 0 40px rgba(168, 85, 247, 0.1) inset;
-  transform: translateX(2px);
+  transform: translateX(4px) scale(1.02);
+
 }
 
 .sidemenu-nav-btn.active::before {
