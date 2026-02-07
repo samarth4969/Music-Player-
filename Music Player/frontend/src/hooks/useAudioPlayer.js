@@ -249,6 +249,9 @@ const handleToggleMute = () => {
     handleChangeSpeed,
     handleChangeVolume,
     handleSeek,
+
+
+    
   };
 };
 
