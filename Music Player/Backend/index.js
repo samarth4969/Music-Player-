@@ -20,7 +20,7 @@ connectDB();
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    "https://music-player-gamma-teal.vercel.app"
+    "https://music-player-k9l8.vercel.app"
   ],
   credentials: true
 }));
