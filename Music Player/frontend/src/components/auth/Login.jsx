@@ -46,9 +46,10 @@ function Login() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/auth/login",
-        { email, password }
-      );
+  `${import.meta.env.VITE_BASE_URL}/api/auth/login`,
+  { email, password }
+);
+
 
       dispatch(
         setUser({
