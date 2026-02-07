@@ -143,7 +143,7 @@ function Login() {
             className="login-submit-btn"
             disabled={isLoading}
           >
-            {isLoading ? "Logging in..." : "Login"}
+            <span>{isLoading ? "Logging in..." : "Login"}</span>
           </button>
         </form>
       )}
