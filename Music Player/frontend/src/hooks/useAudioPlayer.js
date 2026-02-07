@@ -117,7 +117,7 @@ const useAudioPlayer = (songs) => {
     playSongAtIndex(next);
   };
 
-  const handlePrevious = () => {
+  const handlePrev = () => {
     if (!songs || songs.length === 0) return;
 
     const prev =
@@ -239,7 +239,7 @@ const handleToggleMute = () => {
     playSongAtIndex,
     handleTogglePlay,
     handleNext,
-    handlePrevious,
+    handlePrev,
     handleToggleMute,
     handleTimeUpdate,
     handleLoadedMetadata,
